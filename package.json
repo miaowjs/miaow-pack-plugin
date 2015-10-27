@@ -1,0 +1,37 @@
+{
+  "name": "miaow-pack-plugin",
+  "description": "Miaow的打包插件",
+  "version": "0.0.1",
+  "repository": "miaowjs/miaow-pack-plugin",
+  "author": {
+    "name": "anhulife",
+    "email": "anhulife@gmail.com"
+  },
+  "license": "MIT",
+  "keywords": [
+    "miaow",
+    "pack",
+    "plugin"
+  ],
+  "dependencies": {
+    "async": "~1.4.2",
+    "glob": "~5.0.15",
+    "lodash": "~3.10.1",
+    "miaow-util": "~1.0.0"
+  },
+  "devDependencies": {
+    "miaow": "^5.0.0",
+    "miaow-amd-parse": "^4.0.0",
+    "mocha": "^2.3.3",
+    "eslint": "^1.7.2",
+    "eslint-config-airbnb": "^0.1.0",
+    "lodash.find": "^3.2.1"
+  },
+  "scripts": {
+    "postpublish": "cnpm sync miaow-ftl-parse",
+    "test": "mocha"
+  },
+  "engines": {
+    "node": ">=0.10"
+  }
+}

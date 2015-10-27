@@ -1,0 +1,13 @@
+{
+  "name": "foo",
+  "pack": [
+    {
+      "name": "./index.js",
+      "include": [],
+      "exclude": [
+        "../base",
+        "../core"
+      ]
+    }
+  ]
+}

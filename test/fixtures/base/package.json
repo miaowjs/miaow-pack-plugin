@@ -1,0 +1,15 @@
+{
+  "name": "base",
+  "pack": [
+    {
+      "name": "./index.js",
+      "include": [
+        "./bob.js",
+        "./boc.js"
+      ],
+      "exclude": [
+
+      ]
+    }
+  ]
+}
