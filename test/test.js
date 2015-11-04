@@ -1,5 +1,4 @@
 var assert = require('assert');
-var find = require('lodash.find');
 var fs = require('fs');
 var miaow = require('miaow');
 var path = require('path');
@@ -29,10 +28,10 @@ describe('miaow-pack-plugin', function() {
   });
 
   it('包含', function() {
-    assert.equal(find(log.modules, {src: 'base/index.js'}).destHash, '23e98047388c8d688165597c7edfa86b');
+    assert.equal(log.modules['base/index.js'].destHash, '23e98047388c8d688165597c7edfa86b');
   });
 
   it('排除', function() {
-    assert.equal(find(log.modules, {src: 'foo/index.js'}).destHash, 'd03c57b55ad6a2daf9d2cf9327606ad3');
+    assert.equal(log.modules['foo/index.js'].destHash, 'd03c57b55ad6a2daf9d2cf9327606ad3');
   });
 });
