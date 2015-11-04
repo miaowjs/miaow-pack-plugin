@@ -1,12 +1,14 @@
 var _ = require('lodash');
 var async = require('async');
 var mutil = require('miaow-util');
+var console = mutil.console;
 
 var getInfoList = require('./lib/getInfoList');
 var processInfoList = require('./lib/processInfoList');
 var pack = require('./lib/pack');
 
-function Pack() {
+function Pack(options) {
+  this.options = options || {};
 }
 
 Pack.prototype.apply = function(compiler) {
@@ -14,12 +16,18 @@ Pack.prototype.apply = function(compiler) {
 };
 
 Pack.prototype.pack = function(compilation, callback) {
-  mutil.console.log('打包模块');
+  console.log('合并模块');
   async.waterfall([
-    _.partial(getInfoList, compilation),
-    _.partial(processInfoList, compilation),
-    _.partial(pack, compilation)
-  ], callback);
+    _.partial(getInfoList, this.options, compilation),
+    _.partial(processInfoList, this.options, compilation),
+    _.partial(pack, this.options, compilation)
+  ], function(err) {
+    if (err) {
+      console.error('合并模块失败');
+    }
+
+    callback(err);
+  });
 };
 
 module.exports = Pack;

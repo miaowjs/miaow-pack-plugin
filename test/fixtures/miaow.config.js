@@ -15,7 +15,7 @@ module.exports = {
   // 静态文件的域名
   domain: 'http://127.0.0.1',
 
-  plugins: [new Pack()],
+  plugins: [new Pack({debug: true})],
 
   hashLength: 0,
 
