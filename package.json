@@ -28,7 +28,7 @@
     "lodash.find": "^3.2.1"
   },
   "scripts": {
-    "postpublish": "cnpm sync miaow-ftl-parse",
+    "postpublish": "cnpm sync miaow-pack-plugin",
     "test": "mocha"
   },
   "engines": {
