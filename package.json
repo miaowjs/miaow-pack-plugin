@@ -20,7 +20,7 @@
     "miaow-util": "~1.0.0"
   },
   "devDependencies": {
-    "miaow": "^5.1.0",
+    "miaow": "^5.2.1",
     "miaow-amd-parse": "^4.0.3",
     "mocha": "^2.3.3",
     "eslint": "^1.7.2",
