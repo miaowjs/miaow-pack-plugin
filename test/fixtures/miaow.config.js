@@ -10,10 +10,10 @@ module.exports = {
   output: path.resolve(__dirname, '../output'),
 
   // 缓存目录
-  cache: '',
+  cache: path.resolve(__dirname, '../cache'),
 
   // 调试模式
-  debug: true,
+  debug: false,
 
   // 静态文件的域名
   domain: 'http://127.0.0.1',

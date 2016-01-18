@@ -28,10 +28,14 @@ describe('miaow-pack-plugin', function() {
   });
 
   it('包含', function() {
-    assert.equal(log.modules['base/index.js'].destHash, '23e98047388c8d688165597c7edfa86b');
+    var info = log.modules['base/index.js'];
+    assert.equal(info.dependencies.join(','), ['base/bob.js', 'base/boc.js', 'base/package.json'].join(','));
+    assert.equal(log.modules['base/index.js'].destHash, 'a5468dc2f3d9dfefeea287114779c369');
   });
 
   it('排除', function() {
-    assert.equal(log.modules['foo/index.js'].destHash, 'd03c57b55ad6a2daf9d2cf9327606ad3');
+    var info = log.modules['foo/index.js'];
+    assert.equal(info.dependencies.join(','), ['base/index.js', 'core/index.js', 'foo/fob.js', 'foo/package.json'].join(','));
+    assert.equal(info.destHash, 'd03c57b55ad6a2daf9d2cf9327606ad3');
   });
 });
