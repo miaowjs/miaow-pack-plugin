@@ -1,7 +1,7 @@
 {
   "name": "miaow-pack-plugin",
   "description": "Miaow的打包插件",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "repository": "miaowjs/miaow-pack-plugin",
   "author": {
     "name": "anhulife",
@@ -20,7 +20,7 @@
     "miaow-util": "~1.0.0"
   },
   "devDependencies": {
-    "miaow": "^5.2.1",
+    "miaow": "^5.3.0",
     "miaow-amd-parse": "^4.0.3",
     "mocha": "^2.3.3",
     "eslint": "^1.7.2",
