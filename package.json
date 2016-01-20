@@ -1,7 +1,7 @@
 {
   "name": "miaow-pack-plugin",
   "description": "Miaow的打包插件",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "repository": "miaowjs/miaow-pack-plugin",
   "author": {
     "name": "anhulife",
