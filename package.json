@@ -14,10 +14,10 @@
     "plugin"
   ],
   "dependencies": {
-    "async": "~1.4.2",
-    "glob": "~5.0.15",
-    "lodash": "~3.10.1",
-    "miaow-util": "~1.0.0"
+    "async": "1.4.2",
+    "glob": "5.0.15",
+    "lodash": "3.10.1",
+    "miaow-util": "1.1.0"
   },
   "devDependencies": {
     "miaow": "^5.3.0",
